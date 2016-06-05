@@ -2,7 +2,7 @@
 
 ##Convert Go structs to GraphViz dot format.
 
-**Note that this was built to deal with the use case of wanting to visualize complex XML, so this is not a generic visualizer for Go data structures.**
+**Note that this was built to deal with the use case of wanting to visualize complex XML (in this case generated from the XML by [`chidley`](https://github.com/gnewton/chidley)), so this is not meant to be a generic visualizer for Go types.**
 
 The worksflow to convert XMl to [Graphviz](html://www.graphviz.org)'s [`dot`](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) format, for subsequent processing by [`neato`](http://linux.die.net/man/1/neato):
 
@@ -161,12 +161,14 @@ Output:
 
 # Combining Pubmed and MeSH
 
-Pubmed articles are classified using MeSH, so these are related projects.
-So while the two sets of XML-derived data structures, they can be **conceptually** linked.
+Pubmed articles are classified using MeSH, so these are related sets of types.
+So while the two sets of XML-derived types are from different XML, they are **conceptually** linked.
 The `pubmedstruct.DescriptorName` refers to `gomesh2016.DescriptorRecord`, and
 `pubmedstruct.QualifierName` refers to `gomesh2016.QualifierRecord`.
 
-So we can create a union diagram of the two sets of types, linking them through the two above connections:
+So we can create a union diagram of the two sets of types, linking them through the two above connections.
+We also ignore a union of the ignores to try and simplify the diagram:
+
 
 ```
 	config := struct2dot.Config{
