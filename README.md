@@ -122,9 +122,9 @@ Output (note added link line colour is red):
 
 # More complex example: Pubmed article
 
-The PubMed (Entrez)[https://www.ncbi.nlm.nih.gov/books/NBK25497/] service produces very rich XML to describe PubMed articles.
+The PubMed [Entrez](https://www.ncbi.nlm.nih.gov/books/NBK25497/) service produces very rich XML to describe PubMed articles.
 
-Using the Go library (`pubmedstruct`)[github.com/gnewton/pubmedstruct], which was produced by applying `chidley` to a large collection of Pubmed XML.
+Using the Go library [`pubmedstruct`](github.com/gnewton/pubmedstruct), which was produced by applying `chidley` to a large collection of Pubmed XML.
 Small example of this [XML](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml).
 
 This is from the example directory [https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot](https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot)
