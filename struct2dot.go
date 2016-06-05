@@ -84,10 +84,10 @@ func (d *DotDriver) init() {
 func (d *DotDriver) PrintFooter() {
 	if d.Config.ManualLinks != nil && len(d.Config.ManualLinks) > 0 {
 		fmt.Println("\n\n### MANUAL LINKS")
-		fmt.Println("\tedge [color=Red]")
+		fmt.Println("\tedge [color=Green]")
 		for src, dests := range d.Config.ManualLinks {
 			for _, dest := range dests {
-				fmt.Println(src, "->", dest)
+				fmt.Println("\""+src+"\"", "->", "\""+dest+"\"")
 			}
 
 		}

@@ -12,27 +12,31 @@ func main() {
 		ShowStrings:         false,
 		ShowNumbers:         false,
 		RemovePackagePrefix: true,
-		IgnoreTypes:         []string{"gomesh2016.Year", "gomesh2016.Month", "gomesh2016.Day"},
-		ManualLinks:         map[string][]string{"DescriptorReferredTo": []string{"DescriptorRecord"}},
+		IgnoreTypes: []string{
+			"gomesh2016.Day",
+			"gomesh2016.Month",
+			"gomesh2016.Year",
+		},
+		ManualLinks: map[string][]string{"DescriptorReferredTo": []string{"DescriptorRecord"}},
 	}
 
 	pt := struct2dot.DotDriver{Config: &config}
 	pt.PrintHeader()
 
 	dr := new(gomesh2016.DescriptorRecord)
-	t := reflect.TypeOf(*dr)
+	t := reflect.TypeOf(dr)
 	pt.PrintType(&t)
 
 	sr := new(gomesh2016.SupplementalRecord)
-	t = reflect.TypeOf(*sr)
+	t = reflect.TypeOf(sr)
 	pt.PrintType(&t)
 
 	par := new(gomesh2016.PharmacologicalAction)
-	t = reflect.TypeOf(*par)
+	t = reflect.TypeOf(par)
 	pt.PrintType(&t)
 
 	qr := new(gomesh2016.QualifierRecord)
-	t = reflect.TypeOf(*qr)
+	t = reflect.TypeOf(qr)
 	pt.PrintType(&t)
 
 	pt.PrintFooter()

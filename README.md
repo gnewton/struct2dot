@@ -117,5 +117,33 @@ Output (note added link line colour is red):
 
 # More complex example: Pubmed article
 
+This is from the example directory [https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot](https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot):
+```
+	config := struct2dot.Config{
+		ShowStrings:         false,
+		ShowNumbers:         false,
+		RemovePackagePrefix: true,
+		IgnoreTypes: []string{
+			"pubmedstruct.Affiliation",
+			"pubmedstruct.CollectiveName",
+			"pubmedstruct.Day",
+			"pubmedstruct.ForeName",
+			"pubmedstruct.Hour",
+			"pubmedstruct.Identifier",
+			"pubmedstruct.Identifier",
+			"pubmedstruct.Initials",
+			"pubmedstruct.LastName",
+			"pubmedstruct.Minute",
+			"pubmedstruct.Month",
+			"pubmedstruct.Season",
+			"pubmedstruct.Suffix",
+			"pubmedstruct.Year",
+		},
+	}
+```
+
 <img src="https://gnewton.github.io/repos/struct2dot/pubmedDefaultIgnoreTypes.svg">
 
+
+# Combining Pubmed and MeSH
+<img src="https://gnewton.github.io/repos/struct2dot/both.svg">
