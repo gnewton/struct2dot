@@ -95,7 +95,7 @@ Output:
 
 ### Adding nodes and edges
 It is possible to programmatically add additional nodes and links.
-Here a edge is added from `DescriptorReferredTo` to `DescriptorRecord`:
+Here a edge is added from `DescriptorReferredTo` to `DescriptorRecord` (this is from the example directory [https://github.com/gnewton/struct2dot/tree/master/examples/MeSH2dot](https://github.com/gnewton/struct2dot/tree/master/examples/MeSH2dot):
 
 ```
 	config := struct2dot.Config{
@@ -110,7 +110,9 @@ Here a edge is added from `DescriptorReferredTo` to `DescriptorRecord`:
 **NB: Bug: The text used needs to match the internal string, which is effected by whether the package name is removed.
 So if the above had set `RemovePackagePrefix: true`, then this would require `ManualLinks: map[string][]string{"gomesh2016.DescriptorReferredTo": []string{"gomesh2016.DescriptorRecord"}}`.
 
-This is more a fucntion of my `dot` knowledge than a Go issue. Soon to be fixed**
+This is more a function of my `dot` knowledge than a Go issue. Soon to be fixed**
 
 Output (note added link line colour is red):
 <img src="https://gnewton.github.io/repos/struct2dot/meshDefaultWithIgnoreTypesManualLink.svg">
+
+# More complex example: Pubmed article
