@@ -122,7 +122,7 @@ Output (note added link line colour is red):
 
 # More complex example: Pubmed article
 
-This is from the example directory [https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot](https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot), which used PubMed Entrez web service, for example [http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml):
+This is from the example directory [https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot](https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot), which used PubMed Entrez web service, for example [http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml):
 
 
 ```
