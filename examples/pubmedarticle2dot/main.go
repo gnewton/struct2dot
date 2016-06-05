@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	ignoreTypes := []string{"pubmedstruct.PubmedData"}
+	ignoreTypes := []string{"pubmedstruct.Year", "pubmedstruct.Month", "pubmedstruct.Day"}
 	config := struct2dot.Config{
 		ShowStrings:         false,
 		ShowNumbers:         false,
