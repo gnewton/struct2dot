@@ -117,9 +117,14 @@ Output (note added link line colour is red):
 
 <img src="https://gnewton.github.io/repos/struct2dot/meshDefaultWithIgnoreTypesManualLink.svg">
 
+
+
+
 # More complex example: Pubmed article
 
-This is from the example directory [https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot](https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot):
+This is from the example directory [https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot](https://github.com/gnewton/struct2dot/tree/master/examples/pubmedarticle2dot), which used PubMed Entrez web service, for example [http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml](http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=20598978,444444,455555&retmode=xml):
+
+
 ```
 	config := struct2dot.Config{
 		ShowStrings:         false,
@@ -167,7 +172,7 @@ So we can create a union diagram of the two sets of types, linking them through 
 			"gomesh2016.Day",
 			"gomesh2016.Month",
 			"gomesh2016.Year",
-			"pubmedstruct.Affiliation",
+`			"pubmedstruct.Affiliation",
 			"pubmedstruct.CollectiveName",
 			"pubmedstruct.Day",
 			"pubmedstruct.ForeName",
