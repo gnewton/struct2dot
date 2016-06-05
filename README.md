@@ -116,3 +116,6 @@ Output (note added link line colour is red):
 <img src="https://gnewton.github.io/repos/struct2dot/meshDefaultWithIgnoreTypesManualLink.svg">
 
 # More complex example: Pubmed article
+
+<img src="https://gnewton.github.io/repos/struct2dot/pubmedDefaultIgnoreTypes.svg">
+

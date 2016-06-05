@@ -9,12 +9,26 @@ import (
 
 func main() {
 
-	ignoreTypes := []string{"pubmedstruct.Year", "pubmedstruct.Month", "pubmedstruct.Day"}
 	config := struct2dot.Config{
 		ShowStrings:         false,
 		ShowNumbers:         false,
 		RemovePackagePrefix: true,
-		IgnoreTypes:         ignoreTypes,
+		IgnoreTypes: []string{
+			"pubmedstruct.Affiliation",
+			"pubmedstruct.CollectiveName",
+			"pubmedstruct.Day",
+			"pubmedstruct.ForeName",
+			"pubmedstruct.Hour",
+			"pubmedstruct.Identifier",
+			"pubmedstruct.Identifier",
+			"pubmedstruct.Initials",
+			"pubmedstruct.LastName",
+			"pubmedstruct.Minute",
+			"pubmedstruct.Month",
+			"pubmedstruct.Season",
+			"pubmedstruct.Suffix",
+			"pubmedstruct.Year",
+		},
 	}
 
 	pt := struct2dot.DotDriver{Config: &config}
