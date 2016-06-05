@@ -1,0 +1,1562 @@
+digraph foo {
+	node [color=Red]
+	edge [color=Blue]
+	overlap=false;
+	splines=true;
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_DescriptorClass
+### CHILD= string : string
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ AllowableQualifiersList
+### CHILD= *gomesh2016.AllowableQualifiersList : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.AllowableQualifiersList";
+   ###KIND= struct
+#++++++++++++++++++++++ AllowableQualifier
+### CHILD= []*gomesh2016.AllowableQualifier : 
+### map[]
+	"gomesh2016.AllowableQualifiersList"[label="gomesh2016.AllowableQualifiersList"];
+	"gomesh2016.AllowableQualifiersList"->"gomesh2016.AllowableQualifier";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Abbreviation
+### CHILD= *gomesh2016.Abbreviation : 
+### map[]
+	"gomesh2016.AllowableQualifier"[label="gomesh2016.AllowableQualifier"];
+	"gomesh2016.AllowableQualifier"->"gomesh2016.Abbreviation";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.Abbreviation"[label="gomesh2016.Abbreviation"];
+	"gomesh2016.Abbreviation"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[]
+	"gomesh2016.AllowableQualifier"[label="gomesh2016.AllowableQualifier"];
+	"gomesh2016.AllowableQualifier"->"gomesh2016.QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[]
+	"gomesh2016.QualifierReferredTo"[label="gomesh2016.QualifierReferredTo"];
+	"gomesh2016.QualifierReferredTo"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Annotation
+### CHILD= *gomesh2016.Annotation : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.Annotation";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.Annotation"[label="gomesh2016.Annotation"];
+	"gomesh2016.Annotation"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ ConceptList
+### CHILD= *gomesh2016.ConceptList : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.ConceptList";
+   ###KIND= struct
+#++++++++++++++++++++++ Concept
+### CHILD= []*gomesh2016.Concept : 
+### map[]
+	"gomesh2016.ConceptList"[label="gomesh2016.ConceptList"];
+	"gomesh2016.ConceptList"->"gomesh2016.Concept";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_PreferredConceptYN
+### CHILD= string : string
+### map[]
+	"gomesh2016.Concept"[label="gomesh2016.Concept"];
+	"gomesh2016.Concept"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ CASN1Name
+### CHILD= *gomesh2016.CASN1Name : 
+### map[]
+	"gomesh2016.Concept"[label="gomesh2016.Concept"];
+	"gomesh2016.Concept"->"gomesh2016.CASN1Name";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.CASN1Name"[label="gomesh2016.CASN1Name"];
+	"gomesh2016.CASN1Name"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ ConceptName
+### CHILD= *gomesh2016.ConceptName : 
+### map[]
+	"gomesh2016.Concept"[label="gomesh2016.Concept"];
+	"gomesh2016.Concept"->"gomesh2016.ConceptName";
+   ###KIND= struct
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[]
+	"gomesh2016.ConceptName"[label="gomesh2016.ConceptName"];
+	"gomesh2016.ConceptName"->"gomesh2016.String";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.String"[label="gomesh2016.String"];
+	"gomesh2016.String"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ ConceptRelationList
+### CHILD= *gomesh2016.ConceptRelationList : 
+### map[]
+	"gomesh2016.Concept"[label="gomesh2016.Concept"];
+	"gomesh2016.Concept"->"gomesh2016.ConceptRelationList";
+   ###KIND= struct
+#++++++++++++++++++++++ ConceptRelation
+### CHILD= []*gomesh2016.ConceptRelation : 
+### map[]
+	"gomesh2016.ConceptRelationList"[label="gomesh2016.ConceptRelationList"];
+	"gomesh2016.ConceptRelationList"->"gomesh2016.ConceptRelation";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_RelationName
+### CHILD= string : string
+### map[]
+	"gomesh2016.ConceptRelation"[label="gomesh2016.ConceptRelation"];
+	"gomesh2016.ConceptRelation"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ Concept1UI
+### CHILD= *gomesh2016.Concept1UI : 
+### map[]
+	"gomesh2016.ConceptRelation"[label="gomesh2016.ConceptRelation"];
+	"gomesh2016.ConceptRelation"->"gomesh2016.Concept1UI";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.Concept1UI"[label="gomesh2016.Concept1UI"];
+	"gomesh2016.Concept1UI"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ Concept2UI
+### CHILD= *gomesh2016.Concept2UI : 
+### map[]
+	"gomesh2016.ConceptRelation"[label="gomesh2016.ConceptRelation"];
+	"gomesh2016.ConceptRelation"->"gomesh2016.Concept2UI";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.Concept2UI"[label="gomesh2016.Concept2UI"];
+	"gomesh2016.Concept2UI"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ ConceptUI
+### CHILD= *gomesh2016.ConceptUI : 
+### map[]
+	"gomesh2016.Concept"[label="gomesh2016.Concept"];
+	"gomesh2016.Concept"->"gomesh2016.ConceptUI";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.ConceptUI"[label="gomesh2016.ConceptUI"];
+	"gomesh2016.ConceptUI"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ RegistryNumber
+### CHILD= *gomesh2016.RegistryNumber : 
+### map[]
+	"gomesh2016.Concept"[label="gomesh2016.Concept"];
+	"gomesh2016.Concept"->"gomesh2016.RegistryNumber";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.RegistryNumber"[label="gomesh2016.RegistryNumber"];
+	"gomesh2016.RegistryNumber"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ RelatedRegistryNumberList
+### CHILD= *gomesh2016.RelatedRegistryNumberList : 
+### map[]
+	"gomesh2016.Concept"[label="gomesh2016.Concept"];
+	"gomesh2016.Concept"->"gomesh2016.RelatedRegistryNumberList";
+   ###KIND= struct
+#++++++++++++++++++++++ RelatedRegistryNumber
+### CHILD= []*gomesh2016.RelatedRegistryNumber : 
+### map[]
+	"gomesh2016.RelatedRegistryNumberList"[label="gomesh2016.RelatedRegistryNumberList"];
+	"gomesh2016.RelatedRegistryNumberList"->"gomesh2016.RelatedRegistryNumber";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.RelatedRegistryNumber"[label="gomesh2016.RelatedRegistryNumber"];
+	"gomesh2016.RelatedRegistryNumber"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ ScopeNote
+### CHILD= *gomesh2016.ScopeNote : 
+### map[]
+	"gomesh2016.Concept"[label="gomesh2016.Concept"];
+	"gomesh2016.Concept"->"gomesh2016.ScopeNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.ScopeNote"[label="gomesh2016.ScopeNote"];
+	"gomesh2016.ScopeNote"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ TermList
+### CHILD= *gomesh2016.TermList : 
+### map[]
+	"gomesh2016.Concept"[label="gomesh2016.Concept"];
+	"gomesh2016.Concept"->"gomesh2016.TermList";
+   ###KIND= struct
+#++++++++++++++++++++++ Term
+### CHILD= []*gomesh2016.Term : 
+### map[]
+	"gomesh2016.TermList"[label="gomesh2016.TermList"];
+	"gomesh2016.TermList"->"gomesh2016.Term";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_ConceptPreferredTermYN
+### CHILD= string : string
+### map[]
+	"gomesh2016.Term"[label="gomesh2016.Term"];
+	"gomesh2016.Term"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ Attr_IsPermutedTermYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Attr_LexicalTag
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Attr_RecordPreferredTermYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Abbreviation
+### CHILD= *gomesh2016.Abbreviation : 
+### map[]
+	"gomesh2016.Term"[label="gomesh2016.Term"];
+	"gomesh2016.Term"->"gomesh2016.Abbreviation";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[]
+	"gomesh2016.Term"[label="gomesh2016.Term"];
+	"gomesh2016.Term"->"gomesh2016.DateCreated";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+	"gomesh2016.DateCreated"[label="gomesh2016.DateCreated"];
+	"gomesh2016.DateCreated"->"gomesh2016.Day";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+	"gomesh2016.Day"[label="gomesh2016.Day"];
+	"gomesh2016.Day"->"int8";
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+	"gomesh2016.DateCreated"[label="gomesh2016.DateCreated"];
+	"gomesh2016.DateCreated"->"gomesh2016.Month";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+	"gomesh2016.Month"[label="gomesh2016.Month"];
+	"gomesh2016.Month"->"int8";
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+	"gomesh2016.DateCreated"[label="gomesh2016.DateCreated"];
+	"gomesh2016.DateCreated"->"gomesh2016.Year";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+	"gomesh2016.Year"[label="gomesh2016.Year"];
+	"gomesh2016.Year"->"int16";
+   ###KIND= int16
+#++++++++++++++++++++++ EntryVersion
+### CHILD= *gomesh2016.EntryVersion : 
+### map[]
+	"gomesh2016.Term"[label="gomesh2016.Term"];
+	"gomesh2016.Term"->"gomesh2016.EntryVersion";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.EntryVersion"[label="gomesh2016.EntryVersion"];
+	"gomesh2016.EntryVersion"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ SortVersion
+### CHILD= *gomesh2016.SortVersion : 
+### map[]
+	"gomesh2016.Term"[label="gomesh2016.Term"];
+	"gomesh2016.Term"->"gomesh2016.SortVersion";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.SortVersion"[label="gomesh2016.SortVersion"];
+	"gomesh2016.SortVersion"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[]
+	"gomesh2016.Term"[label="gomesh2016.Term"];
+	"gomesh2016.Term"->"gomesh2016.String";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ TermUI
+### CHILD= *gomesh2016.TermUI : 
+### map[]
+	"gomesh2016.Term"[label="gomesh2016.Term"];
+	"gomesh2016.Term"->"gomesh2016.TermUI";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.TermUI"[label="gomesh2016.TermUI"];
+	"gomesh2016.TermUI"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ ThesaurusIDlist
+### CHILD= *gomesh2016.ThesaurusIDlist : 
+### map[]
+	"gomesh2016.Term"[label="gomesh2016.Term"];
+	"gomesh2016.Term"->"gomesh2016.ThesaurusIDlist";
+   ###KIND= struct
+#++++++++++++++++++++++ ThesaurusID
+### CHILD= []*gomesh2016.ThesaurusID : 
+### map[]
+	"gomesh2016.ThesaurusIDlist"[label="gomesh2016.ThesaurusIDlist"];
+	"gomesh2016.ThesaurusIDlist"->"gomesh2016.ThesaurusID";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.ThesaurusID"[label="gomesh2016.ThesaurusID"];
+	"gomesh2016.ThesaurusID"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ ConsiderAlso
+### CHILD= *gomesh2016.ConsiderAlso : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.ConsiderAlso";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.ConsiderAlso"[label="gomesh2016.ConsiderAlso"];
+	"gomesh2016.ConsiderAlso"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.DateCreated";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ DateEstablished
+### CHILD= *gomesh2016.DateEstablished : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.DateEstablished";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+	"gomesh2016.DateEstablished"[label="gomesh2016.DateEstablished"];
+	"gomesh2016.DateEstablished"->"gomesh2016.Day";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+	"gomesh2016.DateEstablished"[label="gomesh2016.DateEstablished"];
+	"gomesh2016.DateEstablished"->"gomesh2016.Month";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+	"gomesh2016.DateEstablished"[label="gomesh2016.DateEstablished"];
+	"gomesh2016.DateEstablished"->"gomesh2016.Year";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ DateRevised
+### CHILD= *gomesh2016.DateRevised : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.DateRevised";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+	"gomesh2016.DateRevised"[label="gomesh2016.DateRevised"];
+	"gomesh2016.DateRevised"->"gomesh2016.Day";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+	"gomesh2016.DateRevised"[label="gomesh2016.DateRevised"];
+	"gomesh2016.DateRevised"->"gomesh2016.Month";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+	"gomesh2016.DateRevised"[label="gomesh2016.DateRevised"];
+	"gomesh2016.DateRevised"->"gomesh2016.Year";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ EntryCombinationList
+### CHILD= *gomesh2016.EntryCombinationList : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.EntryCombinationList";
+   ###KIND= struct
+#++++++++++++++++++++++ EntryCombination
+### CHILD= []*gomesh2016.EntryCombination : 
+### map[]
+	"gomesh2016.EntryCombinationList"[label="gomesh2016.EntryCombinationList"];
+	"gomesh2016.EntryCombinationList"->"gomesh2016.EntryCombination";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ ECIN
+### CHILD= *gomesh2016.ECIN : 
+### map[]
+	"gomesh2016.EntryCombination"[label="gomesh2016.EntryCombination"];
+	"gomesh2016.EntryCombination"->"gomesh2016.ECIN";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[]
+	"gomesh2016.ECIN"[label="gomesh2016.ECIN"];
+	"gomesh2016.ECIN"->"gomesh2016.DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[]
+	"gomesh2016.DescriptorReferredTo"[label="gomesh2016.DescriptorReferredTo"];
+	"gomesh2016.DescriptorReferredTo"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[]
+	"gomesh2016.ECIN"[label="gomesh2016.ECIN"];
+	"gomesh2016.ECIN"->"gomesh2016.QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ECOUT
+### CHILD= *gomesh2016.ECOUT : 
+### map[]
+	"gomesh2016.EntryCombination"[label="gomesh2016.EntryCombination"];
+	"gomesh2016.EntryCombination"->"gomesh2016.ECOUT";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[]
+	"gomesh2016.ECOUT"[label="gomesh2016.ECOUT"];
+	"gomesh2016.ECOUT"->"gomesh2016.DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[]
+	"gomesh2016.ECOUT"[label="gomesh2016.ECOUT"];
+	"gomesh2016.ECOUT"->"gomesh2016.QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ HistoryNote
+### CHILD= *gomesh2016.HistoryNote : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.HistoryNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.HistoryNote"[label="gomesh2016.HistoryNote"];
+	"gomesh2016.HistoryNote"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ NLMClassificationNumber
+### CHILD= *gomesh2016.NLMClassificationNumber : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.NLMClassificationNumber";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.NLMClassificationNumber"[label="gomesh2016.NLMClassificationNumber"];
+	"gomesh2016.NLMClassificationNumber"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ OnlineNote
+### CHILD= *gomesh2016.OnlineNote : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.OnlineNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.OnlineNote"[label="gomesh2016.OnlineNote"];
+	"gomesh2016.OnlineNote"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ PharmacologicalActionList
+### CHILD= *gomesh2016.PharmacologicalActionList : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.PharmacologicalActionList";
+   ###KIND= struct
+#++++++++++++++++++++++ PharmacologicalAction
+### CHILD= []*gomesh2016.PharmacologicalAction : 
+### map[]
+	"gomesh2016.PharmacologicalActionList"[label="gomesh2016.PharmacologicalActionList"];
+	"gomesh2016.PharmacologicalActionList"->"gomesh2016.PharmacologicalAction";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[]
+	"gomesh2016.PharmacologicalAction"[label="gomesh2016.PharmacologicalAction"];
+	"gomesh2016.PharmacologicalAction"->"gomesh2016.DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ PharmacologicalActionSubstanceList
+### CHILD= *gomesh2016.PharmacologicalActionSubstanceList : 
+### map[]
+	"gomesh2016.PharmacologicalAction"[label="gomesh2016.PharmacologicalAction"];
+	"gomesh2016.PharmacologicalAction"->"gomesh2016.PharmacologicalActionSubstanceList";
+   ###KIND= struct
+#++++++++++++++++++++++ Substance
+### CHILD= []*gomesh2016.Substance : 
+### map[]
+	"gomesh2016.PharmacologicalActionSubstanceList"[label="gomesh2016.PharmacologicalActionSubstanceList"];
+	"gomesh2016.PharmacologicalActionSubstanceList"->"gomesh2016.Substance";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ RecordName
+### CHILD= string : string
+### map[]
+	"gomesh2016.Substance"[label="gomesh2016.Substance"];
+	"gomesh2016.Substance"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ RecordUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ PreviousIndexingList
+### CHILD= *gomesh2016.PreviousIndexingList : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.PreviousIndexingList";
+   ###KIND= struct
+#++++++++++++++++++++++ PreviousIndexing
+### CHILD= []*gomesh2016.PreviousIndexing : 
+### map[]
+	"gomesh2016.PreviousIndexingList"[label="gomesh2016.PreviousIndexingList"];
+	"gomesh2016.PreviousIndexingList"->"gomesh2016.PreviousIndexing";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.PreviousIndexing"[label="gomesh2016.PreviousIndexing"];
+	"gomesh2016.PreviousIndexing"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ PublicMeSHNote
+### CHILD= *gomesh2016.PublicMeSHNote : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.PublicMeSHNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.PublicMeSHNote"[label="gomesh2016.PublicMeSHNote"];
+	"gomesh2016.PublicMeSHNote"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ SeeRelatedList
+### CHILD= *gomesh2016.SeeRelatedList : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.SeeRelatedList";
+   ###KIND= struct
+#++++++++++++++++++++++ SeeRelatedDescriptor
+### CHILD= []*gomesh2016.SeeRelatedDescriptor : 
+### map[]
+	"gomesh2016.SeeRelatedList"[label="gomesh2016.SeeRelatedList"];
+	"gomesh2016.SeeRelatedList"->"gomesh2016.SeeRelatedDescriptor";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[]
+	"gomesh2016.SeeRelatedDescriptor"[label="gomesh2016.SeeRelatedDescriptor"];
+	"gomesh2016.SeeRelatedDescriptor"->"gomesh2016.DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ TreeNumberList
+### CHILD= *gomesh2016.TreeNumberList : 
+### map[]
+	"gomesh2016.DescriptorRecord"[label="gomesh2016.DescriptorRecord"];
+	"gomesh2016.DescriptorRecord"->"gomesh2016.TreeNumberList";
+   ###KIND= struct
+#++++++++++++++++++++++ TreeNumber
+### CHILD= []string : 
+### map[]
+	"gomesh2016.TreeNumberList"[label="gomesh2016.TreeNumberList"];
+	"gomesh2016.TreeNumberList"->"string";
+   ###KIND= string
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_SCRClass
+### CHILD= string : string
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ ConceptList
+### CHILD= *gomesh2016.ConceptList : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.ConceptList";
+   ###KIND= struct
+#++++++++++++++++++++++ Concept
+### CHILD= []*gomesh2016.Concept : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_PreferredConceptYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ CASN1Name
+### CHILD= *gomesh2016.CASN1Name : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ConceptName
+### CHILD= *gomesh2016.ConceptName : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ConceptRelationList
+### CHILD= *gomesh2016.ConceptRelationList : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ ConceptRelation
+### CHILD= []*gomesh2016.ConceptRelation : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_RelationName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Concept1UI
+### CHILD= *gomesh2016.Concept1UI : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Concept2UI
+### CHILD= *gomesh2016.Concept2UI : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ConceptUI
+### CHILD= *gomesh2016.ConceptUI : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ RegistryNumber
+### CHILD= *gomesh2016.RegistryNumber : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ RelatedRegistryNumberList
+### CHILD= *gomesh2016.RelatedRegistryNumberList : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ RelatedRegistryNumber
+### CHILD= []*gomesh2016.RelatedRegistryNumber : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ScopeNote
+### CHILD= *gomesh2016.ScopeNote : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ TermList
+### CHILD= *gomesh2016.TermList : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Term
+### CHILD= []*gomesh2016.Term : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_ConceptPreferredTermYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Attr_IsPermutedTermYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Attr_LexicalTag
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Attr_RecordPreferredTermYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Abbreviation
+### CHILD= *gomesh2016.Abbreviation : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ EntryVersion
+### CHILD= *gomesh2016.EntryVersion : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ SortVersion
+### CHILD= *gomesh2016.SortVersion : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ TermUI
+### CHILD= *gomesh2016.TermUI : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ThesaurusIDlist
+### CHILD= *gomesh2016.ThesaurusIDlist : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ ThesaurusID
+### CHILD= []*gomesh2016.ThesaurusID : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.DateCreated";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ DateRevised
+### CHILD= *gomesh2016.DateRevised : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.DateRevised";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ Frequency
+### CHILD= *gomesh2016.Frequency : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.Frequency";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+	"gomesh2016.Frequency"[label="gomesh2016.Frequency"];
+	"gomesh2016.Frequency"->"int16";
+   ###KIND= int16
+#++++++++++++++++++++++ HeadingMappedToList
+### CHILD= *gomesh2016.HeadingMappedToList : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.HeadingMappedToList";
+   ###KIND= struct
+#++++++++++++++++++++++ HeadingMappedTo
+### CHILD= []*gomesh2016.HeadingMappedTo : 
+### map[]
+	"gomesh2016.HeadingMappedToList"[label="gomesh2016.HeadingMappedToList"];
+	"gomesh2016.HeadingMappedToList"->"gomesh2016.HeadingMappedTo";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[]
+	"gomesh2016.HeadingMappedTo"[label="gomesh2016.HeadingMappedTo"];
+	"gomesh2016.HeadingMappedTo"->"gomesh2016.DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[]
+	"gomesh2016.HeadingMappedTo"[label="gomesh2016.HeadingMappedTo"];
+	"gomesh2016.HeadingMappedTo"->"gomesh2016.QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ IndexingInformationList
+### CHILD= *gomesh2016.IndexingInformationList : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.IndexingInformationList";
+   ###KIND= struct
+#++++++++++++++++++++++ IndexingInformation
+### CHILD= []*gomesh2016.IndexingInformation : 
+### map[]
+	"gomesh2016.IndexingInformationList"[label="gomesh2016.IndexingInformationList"];
+	"gomesh2016.IndexingInformationList"->"gomesh2016.IndexingInformation";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[]
+	"gomesh2016.IndexingInformation"[label="gomesh2016.IndexingInformation"];
+	"gomesh2016.IndexingInformation"->"gomesh2016.DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[]
+	"gomesh2016.IndexingInformation"[label="gomesh2016.IndexingInformation"];
+	"gomesh2016.IndexingInformation"->"gomesh2016.QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Note
+### CHILD= *gomesh2016.Note : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.Note";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.Note"[label="gomesh2016.Note"];
+	"gomesh2016.Note"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ PharmacologicalActionList
+### CHILD= *gomesh2016.PharmacologicalActionList : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.PharmacologicalActionList";
+   ###KIND= struct
+#++++++++++++++++++++++ PharmacologicalAction
+### CHILD= []*gomesh2016.PharmacologicalAction : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ PharmacologicalActionSubstanceList
+### CHILD= *gomesh2016.PharmacologicalActionSubstanceList : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Substance
+### CHILD= []*gomesh2016.Substance : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ RecordName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ RecordUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ PreviousIndexingList
+### CHILD= *gomesh2016.PreviousIndexingList : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.PreviousIndexingList";
+   ###KIND= struct
+#++++++++++++++++++++++ PreviousIndexing
+### CHILD= []*gomesh2016.PreviousIndexing : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ SourceList
+### CHILD= *gomesh2016.SourceList : 
+### map[]
+	"gomesh2016.SupplementalRecord"[label="gomesh2016.SupplementalRecord"];
+	"gomesh2016.SupplementalRecord"->"gomesh2016.SourceList";
+   ###KIND= struct
+#++++++++++++++++++++++ Source
+### CHILD= []*gomesh2016.Source : 
+### map[]
+	"gomesh2016.SourceList"[label="gomesh2016.SourceList"];
+	"gomesh2016.SourceList"->"gomesh2016.Source";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+	"gomesh2016.Source"[label="gomesh2016.Source"];
+	"gomesh2016.Source"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ SupplementalRecordName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ SupplementalRecordUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ PharmacologicalActionSubstanceList
+### CHILD= *gomesh2016.PharmacologicalActionSubstanceList : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Substance
+### CHILD= []*gomesh2016.Substance : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ RecordName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ RecordUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+   ###KIND= struct
+#++++++++++++++++++++++ Annotation
+### CHILD= *gomesh2016.Annotation : 
+### map[]
+	"gomesh2016.QualifierRecord"[label="gomesh2016.QualifierRecord"];
+	"gomesh2016.QualifierRecord"->"gomesh2016.Annotation";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ConceptList
+### CHILD= *gomesh2016.ConceptList : 
+### map[]
+	"gomesh2016.QualifierRecord"[label="gomesh2016.QualifierRecord"];
+	"gomesh2016.QualifierRecord"->"gomesh2016.ConceptList";
+   ###KIND= struct
+#++++++++++++++++++++++ Concept
+### CHILD= []*gomesh2016.Concept : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_PreferredConceptYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ CASN1Name
+### CHILD= *gomesh2016.CASN1Name : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ConceptName
+### CHILD= *gomesh2016.ConceptName : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ConceptRelationList
+### CHILD= *gomesh2016.ConceptRelationList : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ ConceptRelation
+### CHILD= []*gomesh2016.ConceptRelation : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_RelationName
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Concept1UI
+### CHILD= *gomesh2016.Concept1UI : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Concept2UI
+### CHILD= *gomesh2016.Concept2UI : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ConceptUI
+### CHILD= *gomesh2016.ConceptUI : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ RegistryNumber
+### CHILD= *gomesh2016.RegistryNumber : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ RelatedRegistryNumberList
+### CHILD= *gomesh2016.RelatedRegistryNumberList : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ RelatedRegistryNumber
+### CHILD= []*gomesh2016.RelatedRegistryNumber : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ScopeNote
+### CHILD= *gomesh2016.ScopeNote : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ TermList
+### CHILD= *gomesh2016.TermList : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Term
+### CHILD= []*gomesh2016.Term : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_ConceptPreferredTermYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Attr_IsPermutedTermYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Attr_LexicalTag
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Attr_RecordPreferredTermYN
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ Abbreviation
+### CHILD= *gomesh2016.Abbreviation : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ EntryVersion
+### CHILD= *gomesh2016.EntryVersion : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ SortVersion
+### CHILD= *gomesh2016.SortVersion : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ TermUI
+### CHILD= *gomesh2016.TermUI : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ ThesaurusIDlist
+### CHILD= *gomesh2016.ThesaurusIDlist : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ ThesaurusID
+### CHILD= []*gomesh2016.ThesaurusID : 
+### map[]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[]
+	"gomesh2016.QualifierRecord"[label="gomesh2016.QualifierRecord"];
+	"gomesh2016.QualifierRecord"->"gomesh2016.DateCreated";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ DateEstablished
+### CHILD= *gomesh2016.DateEstablished : 
+### map[]
+	"gomesh2016.QualifierRecord"[label="gomesh2016.QualifierRecord"];
+	"gomesh2016.QualifierRecord"->"gomesh2016.DateEstablished";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ DateRevised
+### CHILD= *gomesh2016.DateRevised : 
+### map[]
+	"gomesh2016.QualifierRecord"[label="gomesh2016.QualifierRecord"];
+	"gomesh2016.QualifierRecord"->"gomesh2016.DateRevised";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int8 : int8
+### map[]
+   ###KIND= int8
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[]
+   ###KIND= int16
+#++++++++++++++++++++++ HistoryNote
+### CHILD= *gomesh2016.HistoryNote : 
+### map[]
+	"gomesh2016.QualifierRecord"[label="gomesh2016.QualifierRecord"];
+	"gomesh2016.QualifierRecord"->"gomesh2016.HistoryNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ OnlineNote
+### CHILD= *gomesh2016.OnlineNote : 
+### map[]
+	"gomesh2016.QualifierRecord"[label="gomesh2016.QualifierRecord"];
+	"gomesh2016.QualifierRecord"->"gomesh2016.OnlineNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[]
+	"gomesh2016.QualifierRecord"[label="gomesh2016.QualifierRecord"];
+	"gomesh2016.QualifierRecord"->"string";
+   ###KIND= string
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[]
+   ###KIND= string
+#++++++++++++++++++++++ TreeNumberList
+### CHILD= *gomesh2016.TreeNumberList : 
+### map[]
+	"gomesh2016.QualifierRecord"[label="gomesh2016.QualifierRecord"];
+	"gomesh2016.QualifierRecord"->"gomesh2016.TreeNumberList";
+   ###KIND= struct
+#++++++++++++++++++++++ TreeNumber
+### CHILD= []string : 
+### map[]
+   ###KIND= string
+}

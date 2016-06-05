@@ -1,0 +1,1345 @@
+digraph foo {
+	node [color=Red]
+	edge [color=Blue]
+	overlap=false;
+	splines=true;
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_DescriptorClass
+### CHILD= string : string
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ AllowableQualifiersList
+### CHILD= *gomesh2016.AllowableQualifiersList : 
+### map[[]string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"AllowableQualifiersList";
+   ###KIND= struct
+#++++++++++++++++++++++ AllowableQualifier
+### CHILD= []*gomesh2016.AllowableQualifier : 
+### map[uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"AllowableQualifiersList"[label="AllowableQualifiersList"];
+	"AllowableQualifiersList"->"AllowableQualifier";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Abbreviation
+### CHILD= *gomesh2016.Abbreviation : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+	"AllowableQualifier"[label="AllowableQualifier"];
+	"AllowableQualifier"->"Abbreviation";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"AllowableQualifier"[label="AllowableQualifier"];
+	"AllowableQualifier"->"QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ Annotation
+### CHILD= *gomesh2016.Annotation : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"Annotation";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptList
+### CHILD= *gomesh2016.ConceptList : 
+### map[complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"ConceptList";
+   ###KIND= struct
+#++++++++++++++++++++++ Concept
+### CHILD= []*gomesh2016.Concept : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+	"ConceptList"[label="ConceptList"];
+	"ConceptList"->"Concept";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_PreferredConceptYN
+### CHILD= string : string
+### map[float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true]
+#################### RETURNING
+#++++++++++++++++++++++ CASN1Name
+### CHILD= *gomesh2016.CASN1Name : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+	"Concept"[label="Concept"];
+	"Concept"->"CASN1Name";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptName
+### CHILD= *gomesh2016.ConceptName : 
+### map[int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true]
+	"Concept"[label="Concept"];
+	"Concept"->"ConceptName";
+   ###KIND= struct
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"ConceptName"[label="ConceptName"];
+	"ConceptName"->"String";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptRelationList
+### CHILD= *gomesh2016.ConceptRelationList : 
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+	"Concept"[label="Concept"];
+	"Concept"->"ConceptRelationList";
+   ###KIND= struct
+#++++++++++++++++++++++ ConceptRelation
+### CHILD= []*gomesh2016.ConceptRelation : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"ConceptRelationList"[label="ConceptRelationList"];
+	"ConceptRelationList"->"ConceptRelation";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_RelationName
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+#################### RETURNING
+#++++++++++++++++++++++ Concept1UI
+### CHILD= *gomesh2016.Concept1UI : 
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+	"ConceptRelation"[label="ConceptRelation"];
+	"ConceptRelation"->"Concept1UI";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true]
+#################### RETURNING
+#++++++++++++++++++++++ Concept2UI
+### CHILD= *gomesh2016.Concept2UI : 
+### map[float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true]
+	"ConceptRelation"[label="ConceptRelation"];
+	"ConceptRelation"->"Concept2UI";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptUI
+### CHILD= *gomesh2016.ConceptUI : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+	"Concept"[label="Concept"];
+	"Concept"->"ConceptUI";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ RegistryNumber
+### CHILD= *gomesh2016.RegistryNumber : 
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+	"Concept"[label="Concept"];
+	"Concept"->"RegistryNumber";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+#################### RETURNING
+#++++++++++++++++++++++ RelatedRegistryNumberList
+### CHILD= *gomesh2016.RelatedRegistryNumberList : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"Concept"[label="Concept"];
+	"Concept"->"RelatedRegistryNumberList";
+   ###KIND= struct
+#++++++++++++++++++++++ RelatedRegistryNumber
+### CHILD= []*gomesh2016.RelatedRegistryNumber : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+	"RelatedRegistryNumberList"[label="RelatedRegistryNumberList"];
+	"RelatedRegistryNumberList"->"RelatedRegistryNumber";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ ScopeNote
+### CHILD= *gomesh2016.ScopeNote : 
+### map[complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true]
+	"Concept"[label="Concept"];
+	"Concept"->"ScopeNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true]
+#################### RETURNING
+#++++++++++++++++++++++ TermList
+### CHILD= *gomesh2016.TermList : 
+### map[int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true]
+	"Concept"[label="Concept"];
+	"Concept"->"TermList";
+   ###KIND= struct
+#++++++++++++++++++++++ Term
+### CHILD= []*gomesh2016.Term : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+	"TermList"[label="TermList"];
+	"TermList"->"Term";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_ConceptPreferredTermYN
+### CHILD= string : string
+### map[complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ Attr_IsPermutedTermYN
+### CHILD= string : string
+### map[[]string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ Attr_LexicalTag
+### CHILD= string : string
+### map[uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ Attr_RecordPreferredTermYN
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ Abbreviation
+### CHILD= *gomesh2016.Abbreviation : 
+### map[rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true]
+	"Term"[label="Term"];
+	"Term"->"Abbreviation";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[*gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true]
+	"Term"[label="Term"];
+	"Term"->"DateCreated";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ EntryVersion
+### CHILD= *gomesh2016.EntryVersion : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true]
+	"Term"[label="Term"];
+	"Term"->"EntryVersion";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true]
+#################### RETURNING
+#++++++++++++++++++++++ SortVersion
+### CHILD= *gomesh2016.SortVersion : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+	"Term"[label="Term"];
+	"Term"->"SortVersion";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+#################### RETURNING
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true]
+	"Term"[label="Term"];
+	"Term"->"String";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ TermUI
+### CHILD= *gomesh2016.TermUI : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+	"Term"[label="Term"];
+	"Term"->"TermUI";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ ThesaurusIDlist
+### CHILD= *gomesh2016.ThesaurusIDlist : 
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+	"Term"[label="Term"];
+	"Term"->"ThesaurusIDlist";
+   ###KIND= struct
+#++++++++++++++++++++++ ThesaurusID
+### CHILD= []*gomesh2016.ThesaurusID : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+	"ThesaurusIDlist"[label="ThesaurusIDlist"];
+	"ThesaurusIDlist"->"ThesaurusID";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConsiderAlso
+### CHILD= *gomesh2016.ConsiderAlso : 
+### map[*gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"ConsiderAlso";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"DateCreated";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateEstablished
+### CHILD= *gomesh2016.DateEstablished : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"DateEstablished";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateRevised
+### CHILD= *gomesh2016.DateRevised : 
+### map[uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"DateRevised";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ EntryCombinationList
+### CHILD= *gomesh2016.EntryCombinationList : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"EntryCombinationList";
+   ###KIND= struct
+#++++++++++++++++++++++ EntryCombination
+### CHILD= []*gomesh2016.EntryCombination : 
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+	"EntryCombinationList"[label="EntryCombinationList"];
+	"EntryCombinationList"->"EntryCombination";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ ECIN
+### CHILD= *gomesh2016.ECIN : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"EntryCombination"[label="EntryCombination"];
+	"EntryCombination"->"ECIN";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"ECIN"[label="ECIN"];
+	"ECIN"->"DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true]
+	"ECIN"[label="ECIN"];
+	"ECIN"->"QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ ECOUT
+### CHILD= *gomesh2016.ECOUT : 
+### map[uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"EntryCombination"[label="EntryCombination"];
+	"EntryCombination"->"ECOUT";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+	"ECOUT"[label="ECOUT"];
+	"ECOUT"->"DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+	"ECOUT"[label="ECOUT"];
+	"ECOUT"->"QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ HistoryNote
+### CHILD= *gomesh2016.HistoryNote : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"HistoryNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+#################### RETURNING
+#++++++++++++++++++++++ NLMClassificationNumber
+### CHILD= *gomesh2016.NLMClassificationNumber : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"NLMClassificationNumber";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ OnlineNote
+### CHILD= *gomesh2016.OnlineNote : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"OnlineNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ PharmacologicalActionList
+### CHILD= *gomesh2016.PharmacologicalActionList : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"PharmacologicalActionList";
+   ###KIND= struct
+#++++++++++++++++++++++ PharmacologicalAction
+### CHILD= []*gomesh2016.PharmacologicalAction : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+	"PharmacologicalActionList"[label="PharmacologicalActionList"];
+	"PharmacologicalActionList"->"PharmacologicalAction";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+	"PharmacologicalAction"[label="PharmacologicalAction"];
+	"PharmacologicalAction"->"DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ PharmacologicalActionSubstanceList
+### CHILD= *gomesh2016.PharmacologicalActionSubstanceList : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+	"PharmacologicalAction"[label="PharmacologicalAction"];
+	"PharmacologicalAction"->"PharmacologicalActionSubstanceList";
+   ###KIND= struct
+#++++++++++++++++++++++ Substance
+### CHILD= []*gomesh2016.Substance : 
+### map[complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+	"PharmacologicalActionSubstanceList"[label="PharmacologicalActionSubstanceList"];
+	"PharmacologicalActionSubstanceList"->"Substance";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ RecordName
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ RecordUI
+### CHILD= string : string
+### map[float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true]
+#################### RETURNING
+#++++++++++++++++++++++ PreviousIndexingList
+### CHILD= *gomesh2016.PreviousIndexingList : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"PreviousIndexingList";
+   ###KIND= struct
+#++++++++++++++++++++++ PreviousIndexing
+### CHILD= []*gomesh2016.PreviousIndexing : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true]
+	"PreviousIndexingList"[label="PreviousIndexingList"];
+	"PreviousIndexingList"->"PreviousIndexing";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true]
+#################### RETURNING
+#++++++++++++++++++++++ PublicMeSHNote
+### CHILD= *gomesh2016.PublicMeSHNote : 
+### map[int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"PublicMeSHNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ SeeRelatedList
+### CHILD= *gomesh2016.SeeRelatedList : 
+### map[string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"SeeRelatedList";
+   ###KIND= struct
+#++++++++++++++++++++++ SeeRelatedDescriptor
+### CHILD= []*gomesh2016.SeeRelatedDescriptor : 
+### map[uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"SeeRelatedList"[label="SeeRelatedList"];
+	"SeeRelatedList"->"SeeRelatedDescriptor";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"SeeRelatedDescriptor"[label="SeeRelatedDescriptor"];
+	"SeeRelatedDescriptor"->"DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true]
+#################### RETURNING
+#++++++++++++++++++++++ TreeNumberList
+### CHILD= *gomesh2016.TreeNumberList : 
+### map[complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true]
+	"DescriptorRecord"[label="DescriptorRecord"];
+	"DescriptorRecord"->"TreeNumberList";
+   ###KIND= struct
+#++++++++++++++++++++++ TreeNumber
+### CHILD= []string : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_SCRClass
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptList
+### CHILD= *gomesh2016.ConceptList : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"ConceptList";
+   ###KIND= struct
+#++++++++++++++++++++++ Concept
+### CHILD= []*gomesh2016.Concept : 
+### map[int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_PreferredConceptYN
+### CHILD= string : string
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+#################### RETURNING
+#++++++++++++++++++++++ CASN1Name
+### CHILD= *gomesh2016.CASN1Name : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptName
+### CHILD= *gomesh2016.ConceptName : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+   ###KIND= struct
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptRelationList
+### CHILD= *gomesh2016.ConceptRelationList : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+   ###KIND= struct
+#++++++++++++++++++++++ ConceptRelation
+### CHILD= []*gomesh2016.ConceptRelation : 
+### map[rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_RelationName
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ Concept1UI
+### CHILD= *gomesh2016.Concept1UI : 
+### map[*gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ Concept2UI
+### CHILD= *gomesh2016.Concept2UI : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptUI
+### CHILD= *gomesh2016.ConceptUI : 
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ RegistryNumber
+### CHILD= *gomesh2016.RegistryNumber : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true]
+#################### RETURNING
+#++++++++++++++++++++++ RelatedRegistryNumberList
+### CHILD= *gomesh2016.RelatedRegistryNumberList : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+   ###KIND= struct
+#++++++++++++++++++++++ RelatedRegistryNumber
+### CHILD= []*gomesh2016.RelatedRegistryNumber : 
+### map[int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[[]string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ ScopeNote
+### CHILD= *gomesh2016.ScopeNote : 
+### map[uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ TermList
+### CHILD= *gomesh2016.TermList : 
+### map[rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Term
+### CHILD= []*gomesh2016.Term : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_ConceptPreferredTermYN
+### CHILD= string : string
+### map[*gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true]
+#################### RETURNING
+#++++++++++++++++++++++ Attr_IsPermutedTermYN
+### CHILD= string : string
+### map[string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ Attr_LexicalTag
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ Attr_RecordPreferredTermYN
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ Abbreviation
+### CHILD= *gomesh2016.Abbreviation : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[*gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ EntryVersion
+### CHILD= *gomesh2016.EntryVersion : 
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ SortVersion
+### CHILD= *gomesh2016.SortVersion : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true]
+#################### RETURNING
+#++++++++++++++++++++++ TermUI
+### CHILD= *gomesh2016.TermUI : 
+### map[int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ ThesaurusIDlist
+### CHILD= *gomesh2016.ThesaurusIDlist : 
+### map[complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+   ###KIND= struct
+#++++++++++++++++++++++ ThesaurusID
+### CHILD= []*gomesh2016.ThesaurusID : 
+### map[[]string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"DateCreated";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateRevised
+### CHILD= *gomesh2016.DateRevised : 
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"DateRevised";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true]
+#################### RETURNING
+#++++++++++++++++++++++ Frequency
+### CHILD= *gomesh2016.Frequency : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"Frequency";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= int16 : int16
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ HeadingMappedToList
+### CHILD= *gomesh2016.HeadingMappedToList : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"HeadingMappedToList";
+   ###KIND= struct
+#++++++++++++++++++++++ HeadingMappedTo
+### CHILD= []*gomesh2016.HeadingMappedTo : 
+### map[int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true]
+	"HeadingMappedToList"[label="HeadingMappedToList"];
+	"HeadingMappedToList"->"HeadingMappedTo";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+	"HeadingMappedTo"[label="HeadingMappedTo"];
+	"HeadingMappedTo"->"DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+	"HeadingMappedTo"[label="HeadingMappedTo"];
+	"HeadingMappedTo"->"QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ IndexingInformationList
+### CHILD= *gomesh2016.IndexingInformationList : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"IndexingInformationList";
+   ###KIND= struct
+#++++++++++++++++++++++ IndexingInformation
+### CHILD= []*gomesh2016.IndexingInformation : 
+### map[complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true]
+	"IndexingInformationList"[label="IndexingInformationList"];
+	"IndexingInformationList"->"IndexingInformation";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+	"IndexingInformation"[label="IndexingInformation"];
+	"IndexingInformation"->"DescriptorReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierReferredTo
+### CHILD= *gomesh2016.QualifierReferredTo : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+	"IndexingInformation"[label="IndexingInformation"];
+	"IndexingInformation"->"QualifierReferredTo";
+   ###KIND= struct
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ Note
+### CHILD= *gomesh2016.Note : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"Note";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+#################### RETURNING
+#++++++++++++++++++++++ PharmacologicalActionList
+### CHILD= *gomesh2016.PharmacologicalActionList : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"PharmacologicalActionList";
+   ###KIND= struct
+#++++++++++++++++++++++ PharmacologicalAction
+### CHILD= []*gomesh2016.PharmacologicalAction : 
+### map[float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true]
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[*gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ PharmacologicalActionSubstanceList
+### CHILD= *gomesh2016.PharmacologicalActionSubstanceList : 
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Substance
+### CHILD= []*gomesh2016.Substance : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ RecordName
+### CHILD= string : string
+### map[float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true]
+#################### RETURNING
+#++++++++++++++++++++++ RecordUI
+### CHILD= string : string
+### map[int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true]
+#################### RETURNING
+#++++++++++++++++++++++ PreviousIndexingList
+### CHILD= *gomesh2016.PreviousIndexingList : 
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"PreviousIndexingList";
+   ###KIND= struct
+#++++++++++++++++++++++ PreviousIndexing
+### CHILD= []*gomesh2016.PreviousIndexing : 
+### map[complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ SourceList
+### CHILD= *gomesh2016.SourceList : 
+### map[int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true]
+	"SupplementalRecord"[label="SupplementalRecord"];
+	"SupplementalRecord"->"SourceList";
+   ###KIND= struct
+#++++++++++++++++++++++ Source
+### CHILD= []*gomesh2016.Source : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+	"SourceList"[label="SourceList"];
+	"SourceList"->"Source";
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true]
+#################### RETURNING
+#++++++++++++++++++++++ SupplementalRecordName
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ SupplementalRecordUI
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true]
+#################### RETURNING
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorReferredTo
+### CHILD= *gomesh2016.DescriptorReferredTo : 
+### map[float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true]
+   ###KIND= struct
+#++++++++++++++++++++++ DescriptorName
+### CHILD= string : string
+### map[float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true]
+#################### RETURNING
+#++++++++++++++++++++++ DescriptorUI
+### CHILD= string : string
+### map[int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true]
+#################### RETURNING
+#++++++++++++++++++++++ PharmacologicalActionSubstanceList
+### CHILD= *gomesh2016.PharmacologicalActionSubstanceList : 
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Substance
+### CHILD= []*gomesh2016.Substance : 
+### map[string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ RecordName
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ RecordUI
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+   ###KIND= struct
+#++++++++++++++++++++++ Annotation
+### CHILD= *gomesh2016.Annotation : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true]
+	"QualifierRecord"[label="QualifierRecord"];
+	"QualifierRecord"->"Annotation";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptList
+### CHILD= *gomesh2016.ConceptList : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+	"QualifierRecord"[label="QualifierRecord"];
+	"QualifierRecord"->"ConceptList";
+   ###KIND= struct
+#++++++++++++++++++++++ Concept
+### CHILD= []*gomesh2016.Concept : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_PreferredConceptYN
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ CASN1Name
+### CHILD= *gomesh2016.CASN1Name : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptName
+### CHILD= *gomesh2016.ConceptName : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true]
+   ###KIND= struct
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptRelationList
+### CHILD= *gomesh2016.ConceptRelationList : 
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+   ###KIND= struct
+#++++++++++++++++++++++ ConceptRelation
+### CHILD= []*gomesh2016.ConceptRelation : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_RelationName
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ Concept1UI
+### CHILD= *gomesh2016.Concept1UI : 
+### map[*gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+#################### RETURNING
+#++++++++++++++++++++++ Concept2UI
+### CHILD= *gomesh2016.Concept2UI : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ ConceptUI
+### CHILD= *gomesh2016.ConceptUI : 
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true]
+#################### RETURNING
+#++++++++++++++++++++++ RegistryNumber
+### CHILD= *gomesh2016.RegistryNumber : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ RelatedRegistryNumberList
+### CHILD= *gomesh2016.RelatedRegistryNumberList : 
+### map[uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+   ###KIND= struct
+#++++++++++++++++++++++ RelatedRegistryNumber
+### CHILD= []*gomesh2016.RelatedRegistryNumber : 
+### map[string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ ScopeNote
+### CHILD= *gomesh2016.ScopeNote : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ TermList
+### CHILD= *gomesh2016.TermList : 
+### map[*gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Term
+### CHILD= []*gomesh2016.Term : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Attr_ConceptPreferredTermYN
+### CHILD= string : string
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ Attr_IsPermutedTermYN
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true]
+#################### RETURNING
+#++++++++++++++++++++++ Attr_LexicalTag
+### CHILD= string : string
+### map[float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true]
+#################### RETURNING
+#++++++++++++++++++++++ Attr_RecordPreferredTermYN
+### CHILD= string : string
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ Abbreviation
+### CHILD= *gomesh2016.Abbreviation : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ EntryVersion
+### CHILD= *gomesh2016.EntryVersion : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true]
+#################### RETURNING
+#++++++++++++++++++++++ SortVersion
+### CHILD= *gomesh2016.SortVersion : 
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ String
+### CHILD= *gomesh2016.String : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true]
+#################### RETURNING
+#++++++++++++++++++++++ TermUI
+### CHILD= *gomesh2016.TermUI : 
+### map[[]string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+#################### RETURNING
+#++++++++++++++++++++++ ThesaurusIDlist
+### CHILD= *gomesh2016.ThesaurusIDlist : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+   ###KIND= struct
+#++++++++++++++++++++++ ThesaurusID
+### CHILD= []*gomesh2016.ThesaurusID : 
+### map[gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+   ###DEEP
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[*gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true *gomesh2016.Month:true uint16:true gomesh2016.Year:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateCreated
+### CHILD= *gomesh2016.DateCreated : 
+### map[*gomesh2016.Month:true uint16:true gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true float32:true float64:true complex64:true rune:true gomesh2016.Day:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true]
+	"QualifierRecord"[label="QualifierRecord"];
+	"QualifierRecord"->"DateCreated";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true uint64:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateEstablished
+### CHILD= *gomesh2016.DateEstablished : 
+### map[int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true]
+	"QualifierRecord"[label="QualifierRecord"];
+	"QualifierRecord"->"DateEstablished";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[[]string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+#################### RETURNING
+#++++++++++++++++++++++ DateRevised
+### CHILD= *gomesh2016.DateRevised : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+	"QualifierRecord"[label="QualifierRecord"];
+	"QualifierRecord"->"DateRevised";
+   ###KIND= struct
+#++++++++++++++++++++++ Day
+### CHILD= *gomesh2016.Day : 
+### map[int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true]
+#################### RETURNING
+#++++++++++++++++++++++ Month
+### CHILD= *gomesh2016.Month : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true]
+#################### RETURNING
+#++++++++++++++++++++++ Year
+### CHILD= *gomesh2016.Year : 
+### map[float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true]
+#################### RETURNING
+#++++++++++++++++++++++ HistoryNote
+### CHILD= *gomesh2016.HistoryNote : 
+### map[int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true]
+	"QualifierRecord"[label="QualifierRecord"];
+	"QualifierRecord"->"HistoryNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+#################### RETURNING
+#++++++++++++++++++++++ OnlineNote
+### CHILD= *gomesh2016.OnlineNote : 
+### map[gomesh2016.Day:true float32:true float64:true complex64:true rune:true gomesh2016.Month:true int8:true int16:true int32:true int64:true complex128:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true uint32:true]
+	"QualifierRecord"[label="QualifierRecord"];
+	"QualifierRecord"->"OnlineNote";
+   ###KIND= struct
+#++++++++++++++++++++++ Text
+### CHILD= string : string
+### map[int64:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true rune:true gomesh2016.Day:true float32:true float64:true complex64:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierName
+### CHILD= string : string
+### map[uint16:true gomesh2016.Year:true *gomesh2016.Month:true string:true []string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true float64:true complex64:true rune:true gomesh2016.Day:true float32:true int16:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true]
+#################### RETURNING
+#++++++++++++++++++++++ QualifierUI
+### CHILD= string : string
+### map[complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true]
+#################### RETURNING
+#++++++++++++++++++++++ TreeNumberList
+### CHILD= *gomesh2016.TreeNumberList : 
+### map[[]string:true uint8:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true complex64:true rune:true gomesh2016.Day:true float32:true float64:true int32:true int64:true complex128:true gomesh2016.Month:true int8:true int16:true gomesh2016.Year:true *gomesh2016.Month:true uint16:true]
+	"QualifierRecord"[label="QualifierRecord"];
+	"QualifierRecord"->"TreeNumberList";
+   ###KIND= struct
+#++++++++++++++++++++++ TreeNumber
+### CHILD= []string : 
+### map[gomesh2016.Year:true *gomesh2016.Month:true uint16:true uint32:true uint64:true *gomesh2016.Year:true *gomesh2016.Day:true string:true []string:true uint8:true gomesh2016.Day:true float32:true float64:true complex64:true rune:true complex128:true gomesh2016.Month:true int8:true int16:true int32:true int64:true]
+#################### RETURNING
+
+
+### MANUAL LINKS
+	edge [color=Red]
+DescriptorReferredTo -> DescriptorRecord
+}
