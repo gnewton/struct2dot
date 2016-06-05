@@ -146,4 +146,43 @@ This is from the example directory [https://github.com/gnewton/struct2dot/tree/m
 
 
 # Combining Pubmed and MeSH
+
+Pubmed articles are classified using MeSH, so these are related projects.
+So while the two sets of XML-derived data structures, they can be **conceptually** linked.
+The `pubmedstruct.DescriptorName` refers to `gomesh2016.DescriptorRecord`, and
+`pubmedstruct.QualifierName` refers to `gomesh2016.QualifierRecord`.
+
+So we can create a union diagram of the two sets of types, linking them through the two above connections:
+
+```
+	config := struct2dot.Config{
+		ShowStrings:         false,
+		ShowNumbers:         false,
+		RemovePackagePrefix: false,
+		IgnoreTypes: []string{
+			"gomesh2016.Day",
+			"gomesh2016.Month",
+			"gomesh2016.Year",
+			"pubmedstruct.Affiliation",
+			"pubmedstruct.CollectiveName",
+			"pubmedstruct.Day",
+			"pubmedstruct.ForeName",
+			"pubmedstruct.Hour",
+			"pubmedstruct.Identifier",
+			"pubmedstruct.Identifier",
+			"pubmedstruct.Initials",
+			"pubmedstruct.LastName",
+			"pubmedstruct.Minute",
+			"pubmedstruct.Month",
+			"pubmedstruct.Season",
+			"pubmedstruct.Suffix",
+			"pubmedstruct.Year",
+		},
+		ManualLinks: map[string][]string{
+			"pubmedstruct.DescriptorName": []string{"gomesh2016.DescriptorRecord"},
+			"pubmedstruct.QualifierName":  []string{"gomesh2016.QualifierRecord"},
+		},
+	}
+```
+
 <img src="https://gnewton.github.io/repos/struct2dot/both.svg">
