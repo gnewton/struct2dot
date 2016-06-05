@@ -74,6 +74,7 @@ The package name prefix can also make the diagram larger and busier.
 ```
 
 Here is an example with the above `config`, with strings, numbers turned on, and package names not removed (**Very complicated and hard-to-read diagram**):
+
 <img src="https://gnewton.github.io/repos/struct2dot/meshWithStringsAndNumbersAndPackage.svg">
 
 
@@ -91,6 +92,7 @@ It is possible to indicate which types should be ignored. Here, the 'gomesh2016.
 ```
 
 Output:
+
 <img src="https://gnewton.github.io/repos/struct2dot/meshDefaultWithIgnoreTypes.svg">
 
 ### Adding nodes and edges
@@ -112,6 +114,7 @@ Here a edge is added from `DescriptorReferredTo` to `DescriptorRecord` (this is 
 **This is more a function of my `dot` knowledge than a Go issue. Soon to be fixed**
 
 Output (note added link line colour is red):
+
 <img src="https://gnewton.github.io/repos/struct2dot/meshDefaultWithIgnoreTypesManualLink.svg">
 
 # More complex example: Pubmed article
@@ -140,6 +143,8 @@ This is from the example directory [https://github.com/gnewton/struct2dot/tree/m
 		},
 	}
 ```
+
+Output:
 
 <img src="https://gnewton.github.io/repos/struct2dot/pubmedDefaultIgnoreTypes.svg">
 
@@ -183,5 +188,7 @@ So we can create a union diagram of the two sets of types, linking them through 
 		},
 	}
 ```
+
+Output:
 
 <img src="https://gnewton.github.io/repos/struct2dot/both.svg">
