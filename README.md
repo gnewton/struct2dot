@@ -24,7 +24,7 @@ import (
 
 func main() {
 
-	pt := new(struct2dot)
+	pt := new(struct2dot.DotDriver)
 	pt.PrintHeader()
 
 	dr := new(gomesh2016.DescriptorRecord)
