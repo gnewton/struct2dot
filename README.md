@@ -73,7 +73,7 @@ The package name prefix can also make the diagram larger and busier.
 	}
 ```
 
-Here is an example with the above `config`, with strings, numbers turned on, and package names not removed:
+Here is an example with the above `config`, with strings, numbers turned on, and package names not removed (**Very complicated and hard-to-read diagram**):
 <img src="https://gnewton.github.io/repos/struct2dot/meshWithStringsAndNumbersAndPackage.svg">
 
 
@@ -94,7 +94,7 @@ Output:
 <img src="https://gnewton.github.io/repos/struct2dot/meshDefaultWithIgnoreTypes.svg">
 
 ### Adding nodes and edges
-It is possible to programmatically add additional nodes and links.
+It is possible to programmatically add additional nodes and edges, or make new edges between existing nodes, or one new node and an existing node.
 Here a edge is added from `DescriptorReferredTo` to `DescriptorRecord` (this is from the example directory [https://github.com/gnewton/struct2dot/tree/master/examples/MeSH2dot](https://github.com/gnewton/struct2dot/tree/master/examples/MeSH2dot):
 
 ```
@@ -107,10 +107,9 @@ Here a edge is added from `DescriptorReferredTo` to `DescriptorRecord` (this is 
 	}
 ```
 
-**NB: Bug: The text used needs to match the internal string, which is effected by whether the package name is removed.
-So if the above had set `RemovePackagePrefix: true`, then this would require `ManualLinks: map[string][]string{"gomesh2016.DescriptorReferredTo": []string{"gomesh2016.DescriptorRecord"}}`.
+**NB: Bug: The text used needs to match the internal string, which is effected by whether the package name is removed.So if the above had set `RemovePackagePrefix: true`, then this would require `ManualLinks: map[string][]string{"gomesh2016.DescriptorReferredTo": []string{"gomesh2016.DescriptorRecord"}}`.**
 
-This is more a function of my `dot` knowledge than a Go issue. Soon to be fixed**
+**This is more a function of my `dot` knowledge than a Go issue. Soon to be fixed**
 
 Output (note added link line colour is red):
 <img src="https://gnewton.github.io/repos/struct2dot/meshDefaultWithIgnoreTypesManualLink.svg">
