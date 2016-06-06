@@ -36,9 +36,10 @@ type Config struct {
 }
 
 type DotDriver struct {
-	Config      *Config
-	edges       map[string]bool
-	ignoreTypes map[string]bool
+	Config            *Config
+	edges             map[string]bool
+	nodeLabelsPrinted map[string]bool
+	ignoreTypes       map[string]bool
 }
 
 func (d *DotDriver) PrintHeader() {
@@ -49,11 +50,15 @@ func (d *DotDriver) PrintHeader() {
 	fmt.Println("\tedge [color=Blue]")
 	fmt.Println("\toverlap=false;")
 	fmt.Println("\tsplines=true;")
+	fmt.Println("\t# End Header")
+	fmt.Println("")
+
 }
 
 func (d *DotDriver) init() {
 	d.edges = make(map[string]bool)
 	d.ignoreTypes = make(map[string]bool)
+	d.nodeLabelsPrinted = make(map[string]bool)
 	if d.Config == nil {
 		d.Config = &(Config{
 			ShowStrings:         false,
@@ -83,11 +88,11 @@ func (d *DotDriver) init() {
 
 func (d *DotDriver) PrintFooter() {
 	if d.Config.ManualLinks != nil && len(d.Config.ManualLinks) > 0 {
-		fmt.Println("\n\n### MANUAL LINKS")
+		fmt.Println("\n\n\t# MANUAL LINKS")
 		fmt.Println("\tedge [color=Green]")
 		for src, dests := range d.Config.ManualLinks {
 			for _, dest := range dests {
-				fmt.Println("\""+src+"\"", "->", "\""+dest+"\"")
+				printNodeEdgeNode(src, dest, d.nodeLabelsPrinted)
 			}
 
 		}
@@ -102,36 +107,24 @@ func (d *DotDriver) PrintType(t *reflect.Type) {
 func printType(parent *reflect.Type, t *reflect.Type, d *DotDriver) {
 
 	kind := (*t).Kind().String()
-	if parent != nil {
-		//fmt.Println("-----------  ", (*parent).String(), (*t).String(), "  =", kind)
-	}
+
 	if kind == "ptr" || kind == "slice" {
-		fmt.Println("   ###DEEP")
 		actualType := (*t).Elem()
 		printType(parent, &actualType, d)
 		return
 	}
 
-	fmt.Println("   ###KIND=", kind)
 	if kind != "struct" {
 		return
 	}
 
 	n := (*t).NumField()
-	if n == 0 {
-		fmt.Println("   ###NOT CHILDREN")
-	}
-	//fmt.Println("   ### 12")
 
 	for i := 0; i < n; i++ {
-		fmt.Println("#++++++++++++++++++++++", (*t).Field(i).Name)
 		newT := (*t).Field(i).Type
 		newKind := newT.Kind().String()
 
-		fmt.Println("### CHILD=", newT.String(), ":", newT.Name())
-		fmt.Println("###", d.ignoreTypes)
 		if _, ok := d.ignoreTypes[removePointerLeadingAsterisk(newT.String())]; ok {
-			fmt.Println("#################### RETURNING")
 			continue
 		}
 
@@ -140,12 +133,10 @@ func printType(parent *reflect.Type, t *reflect.Type, d *DotDriver) {
 		}
 
 		parentString := clean((*t).String(), d.Config.RemovePackagePrefix)
-		var child string
-		child = clean(newT.String(), d.Config.RemovePackagePrefix)
-		edgeName := parentString + "_" + child
+		childString := clean(newT.String(), d.Config.RemovePackagePrefix)
+		edgeName := parentString + "_" + childString
 		if _, ok := d.edges[edgeName]; !ok {
-			fmt.Println("\t\"" + parentString + "\"[label=\"" + parentString + "\"];")
-			fmt.Println("\t\"" + parentString + "\"->\"" + child + "\";")
+			printNodeEdgeNode(parentString, childString, d.nodeLabelsPrinted)
 			d.edges[edgeName] = true
 		}
 		printType(t, &newT, d)
@@ -155,6 +146,21 @@ func printType(parent *reflect.Type, t *reflect.Type, d *DotDriver) {
 func removePointerLeadingAsterisk(s string) string {
 	return strings.Replace(s, "*", "", 1)
 
+}
+
+func printNodeEdgeNode(parent string, child string, nodeLabelsPrinted map[string]bool) {
+	fmt.Println("")
+	printLabel(parent, nodeLabelsPrinted)
+	printLabel(child, nodeLabelsPrinted)
+
+	fmt.Println("\t\"" + parent + "\"  ->  \"" + child + "\";")
+}
+
+func printLabel(label string, nodeLabelsPrinted map[string]bool) {
+	if _, ok := nodeLabelsPrinted[label]; !ok {
+		fmt.Println("\t\"" + label + "\"[label=\"" + label + "\"];")
+		nodeLabelsPrinted[label] = true
+	}
 }
 
 func clean(s string, removePackagePrefix bool) string {
