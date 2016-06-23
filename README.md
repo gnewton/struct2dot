@@ -209,7 +209,7 @@ We also ignore a union of the ignores to try and simplify the diagram:
 			"pubmedstruct.QualifierName":  []string{"gomesh2016.QualifierRecord"},
 		},
 	}
-		pt := struct2dot.DotDriver{Config: &config}
+	pt := struct2dot.DotDriver{Config: &config}
 	pt.PrintHeader()
 
 	d := new(pubmedstruct.PubmedArticle)
