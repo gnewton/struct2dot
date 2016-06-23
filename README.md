@@ -4,7 +4,7 @@
 
 **Note that this was built to deal with the use case of wanting to visualize complex XML (in this case generated from the XML by [`chidley`](https://github.com/gnewton/chidley)), so this is not meant to be a generic visualizer for Go types.**
 
-The worksflow to convert XML to [Graphviz](html://www.graphviz.org)'s [`dot`](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) format, for subsequent processing by [`neato`](http://linux.die.net/man/1/neato):
+The workflow to convert XML to [Graphviz](html://www.graphviz.org)'s [`dot`](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) format, for subsequent processing by [`neato`](http://linux.die.net/man/1/neato):
 
 1. XML converted to Go structs using [`chidley`](https://github.com/gnewton/chidley)
 2. Write simple Go program using this `struct2dot` library and structs you want from `chidley` generated Go code
@@ -209,6 +209,29 @@ We also ignore a union of the ignores to try and simplify the diagram:
 			"pubmedstruct.QualifierName":  []string{"gomesh2016.QualifierRecord"},
 		},
 	}
+		pt := struct2dot.DotDriver{Config: &config}
+	pt.PrintHeader()
+
+	d := new(pubmedstruct.PubmedArticle)
+	t := reflect.TypeOf(*d)
+	pt.PrintType(&t)
+
+	dr := new(gomesh2016.DescriptorRecord)
+	t = reflect.TypeOf(*dr)
+	pt.PrintType(&t)
+
+	sr := new(gomesh2016.SupplementalRecord)
+	t = reflect.TypeOf(*sr)
+	pt.PrintType(&t)
+
+	par := new(gomesh2016.PharmacologicalAction)
+	t = reflect.TypeOf(*par)
+	pt.PrintType(&t)
+
+	qr := new(gomesh2016.QualifierRecord)
+	t = reflect.TypeOf(*qr)
+	pt.PrintType(&t)
+
 ```
 
 Output:
