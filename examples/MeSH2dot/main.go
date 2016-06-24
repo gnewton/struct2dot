@@ -12,7 +12,7 @@ func main() {
 		ShowStrings:         false,
 		ShowNumbers:         false,
 		RemovePackagePrefix: true,
-		IgnoreTypes: []string{
+		NotTypes: []string{
 			"gomesh2016.Day",
 			"gomesh2016.Month",
 			"gomesh2016.Year",

@@ -13,7 +13,7 @@ func main() {
 		ShowStrings:         false,
 		ShowNumbers:         false,
 		RemovePackagePrefix: true,
-		IgnoreTypes: []string{
+		NotTypes: []string{
 			"pubmedstruct.Affiliation",
 			"pubmedstruct.CollectiveName",
 			"pubmedstruct.Day",

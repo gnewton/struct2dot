@@ -6,7 +6,8 @@ import (
 	"strings"
 )
 
-var numberTypes = []string{"uint8",
+var numberTypes = []string{
+	"uint8",
 	"uint16",
 	"uint32",
 	"uint64",
@@ -32,9 +33,9 @@ type Config struct {
 	ShowNumbers         bool
 	RemovePackagePrefix bool
 
-	ManualLinks         map[string][]string
+	ManualLinks map[string][]string
 
-	NotTypes         []string
+	NotTypes []string
 
 	OnlyAttributes []string
 	NotAttributwes []string
@@ -49,7 +50,6 @@ type DotDriver struct {
 
 func (d *DotDriver) PrintHeader() {
 	d.init()
-
 	fmt.Println("digraph foo {")
 	fmt.Println("\tnode [color=Red]")
 	fmt.Println("\tedge [color=Blue]")
@@ -69,7 +69,7 @@ func (d *DotDriver) init() {
 			ShowStrings:         false,
 			ShowNumbers:         false,
 			RemovePackagePrefix: true,
-			NotTypes:         nil,
+			NotTypes:            nil,
 		})
 	}
 	if d.Config.NotTypes != nil && len(d.Config.NotTypes) > 0 {
