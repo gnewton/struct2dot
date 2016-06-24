@@ -25,3 +25,9 @@ _testmain.go
 
 # emacs
 *~
+
+*.dot
+*.svg
+MeSH2dot
+both
+pubmedarticle2dot

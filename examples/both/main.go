@@ -4,7 +4,6 @@ import (
 	"github.com/gnewton/gomesh2016"
 	"github.com/gnewton/pubmedstruct"
 	"github.com/gnewton/struct2dot"
-	"reflect"
 )
 
 func main() {
@@ -40,24 +39,19 @@ func main() {
 	pt.PrintHeader()
 
 	d := new(pubmedstruct.PubmedArticle)
-	t := reflect.TypeOf(*d)
-	pt.PrintType(&t)
+	pt.PrintType(d)
 
 	dr := new(gomesh2016.DescriptorRecord)
-	t = reflect.TypeOf(*dr)
-	pt.PrintType(&t)
+	pt.PrintType(dr)
 
 	sr := new(gomesh2016.SupplementalRecord)
-	t = reflect.TypeOf(*sr)
-	pt.PrintType(&t)
+	pt.PrintType(sr)
 
 	par := new(gomesh2016.PharmacologicalAction)
-	t = reflect.TypeOf(*par)
-	pt.PrintType(&t)
+	pt.PrintType(par)
 
 	qr := new(gomesh2016.QualifierRecord)
-	t = reflect.TypeOf(*qr)
-	pt.PrintType(&t)
+	pt.PrintType(qr)
 
 	pt.PrintFooter()
 }
