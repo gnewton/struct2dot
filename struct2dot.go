@@ -28,24 +28,27 @@ type StructDriver interface {
 	PrintFooter()
 }
 
+type isAttributeFunc func(string) bool
+
 type Config struct {
 	ShowStrings         bool
 	ShowNumbers         bool
+	ShowAttrubutes      bool
 	RemovePackagePrefix bool
 
 	ManualLinks map[string][]string
 
 	NotTypes []string
 
-	OnlyAttributes []string
-	NotAttributwes []string
+	NotAttributes   []string
+	IsAttributeFunc isAttributeFunc
 }
 
 type DotDriver struct {
 	Config            *Config
 	edges             map[string]bool
 	nodeLabelsPrinted map[string]bool
-	ignoreTypes       map[string]bool
+	notTypes          map[string]bool
 }
 
 func (d *DotDriver) PrintHeader() {
@@ -62,7 +65,7 @@ func (d *DotDriver) PrintHeader() {
 
 func (d *DotDriver) init() {
 	d.edges = make(map[string]bool)
-	d.ignoreTypes = make(map[string]bool)
+	d.notTypes = make(map[string]bool)
 	d.nodeLabelsPrinted = make(map[string]bool)
 	if d.Config == nil {
 		d.Config = &(Config{
@@ -74,19 +77,19 @@ func (d *DotDriver) init() {
 	}
 	if d.Config.NotTypes != nil && len(d.Config.NotTypes) > 0 {
 		for i, _ := range d.Config.NotTypes {
-			d.ignoreTypes[d.Config.NotTypes[i]] = true
-			d.ignoreTypes["*"+d.Config.NotTypes[i]] = true
+			d.notTypes[d.Config.NotTypes[i]] = true
+			d.notTypes["*"+d.Config.NotTypes[i]] = true
 		}
 	}
 
 	if !d.Config.ShowStrings {
-		d.ignoreTypes["string"] = true
-		d.ignoreTypes["[]string"] = true
+		d.notTypes["string"] = true
+		d.notTypes["[]string"] = true
 	}
 
 	if !d.Config.ShowNumbers {
 		for i, _ := range numberTypes {
-			d.ignoreTypes[numberTypes[i]] = true
+			d.notTypes[numberTypes[i]] = true
 		}
 	}
 }
@@ -105,8 +108,9 @@ func (d *DotDriver) PrintFooter() {
 	fmt.Println("}")
 }
 
-func (d *DotDriver) PrintType(t *reflect.Type) {
-	printType(nil, t, d)
+func (d *DotDriver) PrintType(i interface{}) {
+	t := reflect.TypeOf(i)
+	printType(nil, &t, d)
 }
 
 func printType(parent *reflect.Type, t *reflect.Type, d *DotDriver) {
@@ -129,7 +133,7 @@ func printType(parent *reflect.Type, t *reflect.Type, d *DotDriver) {
 		newT := (*t).Field(i).Type
 		newKind := newT.Kind().String()
 
-		if _, ok := d.ignoreTypes[removePointerLeadingAsterisk(newT.String())]; ok {
+		if _, ok := d.notTypes[removePointerLeadingAsterisk(newT.String())]; ok {
 			continue
 		}
 
