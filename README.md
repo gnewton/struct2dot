@@ -28,20 +28,16 @@ func main() {
 	pt.PrintHeader()
 
 	dr := new(gomesh2016.DescriptorRecord)
-	t := reflect.TypeOf(*dr)
-	pt.PrintType(t)
+	pt.PrintType(dr)
 
 	sr := new(gomesh2016.SupplementalRecord)
-	t = reflect.TypeOf(*sr)
-	pt.PrintType(t)
+	pt.PrintType(sr)
 
 	par := new(gomesh2016.PharmacologicalAction)
-	t = reflect.TypeOf(*par)
-	pt.PrintType(t)
+	pt.PrintType(par)
 
 	qr := new(gomesh2016.QualifierRecord)
-	t = reflect.TypeOf(*qr)
-	pt.PrintType(t)
+	pt.PrintType(qr)
 
 	pt.PrintFooter()
 }
@@ -213,24 +209,19 @@ We also ignore a union of the ignores to try and simplify the diagram:
 	pt.PrintHeader()
 
 	d := new(pubmedstruct.PubmedArticle)
-	t := reflect.TypeOf(*d)
-	pt.PrintType(&t)
+	pt.PrintType(d)
 
 	dr := new(gomesh2016.DescriptorRecord)
-	t = reflect.TypeOf(*dr)
-	pt.PrintType(&t)
+	pt.PrintType(dr)
 
 	sr := new(gomesh2016.SupplementalRecord)
-	t = reflect.TypeOf(*sr)
-	pt.PrintType(&t)
+	pt.PrintType(sr)
 
 	par := new(gomesh2016.PharmacologicalAction)
-	t = reflect.TypeOf(*par)
-	pt.PrintType(&t)
+	pt.PrintType(par)
 
 	qr := new(gomesh2016.QualifierRecord)
-	t = reflect.TypeOf(*qr)
-	pt.PrintType(&t)
+	pt.PrintType(qr)
 
 ```
 
