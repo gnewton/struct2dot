@@ -31,8 +31,13 @@ type Config struct {
 	ShowStrings         bool
 	ShowNumbers         bool
 	RemovePackagePrefix bool
-	IgnoreTypes         []string
+
 	ManualLinks         map[string][]string
+
+	NotTypes         []string
+
+	OnlyAttributes []string
+	NotAttributwes []string
 }
 
 type DotDriver struct {
@@ -64,13 +69,13 @@ func (d *DotDriver) init() {
 			ShowStrings:         false,
 			ShowNumbers:         false,
 			RemovePackagePrefix: true,
-			IgnoreTypes:         nil,
+			NotTypes:         nil,
 		})
 	}
-	if d.Config.IgnoreTypes != nil && len(d.Config.IgnoreTypes) > 0 {
-		for i, _ := range d.Config.IgnoreTypes {
-			d.ignoreTypes[d.Config.IgnoreTypes[i]] = true
-			d.ignoreTypes["*"+d.Config.IgnoreTypes[i]] = true
+	if d.Config.NotTypes != nil && len(d.Config.NotTypes) > 0 {
+		for i, _ := range d.Config.NotTypes {
+			d.ignoreTypes[d.Config.NotTypes[i]] = true
+			d.ignoreTypes["*"+d.Config.NotTypes[i]] = true
 		}
 	}
 

@@ -60,7 +60,7 @@ The `struct2dot` type can take a `struct2dot.Config`, that can be used to alter 
 		ShowStrings:         false,
 		ShowNumbers:         false,
 		RemovePackagePrefix: true,
-		IgnoreTypes:         nil,
+		NotTypes:         nil,
 		ManualLinks:         nil,
 	}
 ```
@@ -78,7 +78,7 @@ The package name prefix can also make the diagram larger and busier.
 		ShowStrings:         true,
 		ShowNumbers:         true,
 		RemovePackagePrefix: false,
-		IgnoreTypes:         nil,
+		NotTypes:         nil,
 		ManualLinks:         nil,
 	}
 ```
@@ -97,7 +97,7 @@ It is possible to indicate which types should be ignored. Here, the 'gomesh2016.
 		ShowStrings:         false,
 		ShowNumbers:         false,
 		RemovePackagePrefix: true,
-		IgnoreTypes:         []string{"gomesh2016.Year", "gomesh2016.Month", "gomesh2016.Day"},
+		NotTypes:         []string{"gomesh2016.Year", "gomesh2016.Month", "gomesh2016.Day"},
 	}
 ```
 
@@ -114,7 +114,7 @@ Here a edge is added from `DescriptorReferredTo` to `DescriptorRecord` (this is 
 		ShowStrings:         false,
 		ShowNumbers:         false,
 		RemovePackagePrefix: true,
-		IgnoreTypes:         []string{"gomesh2016.Year", "gomesh2016.Month", "gomesh2016.Day"},
+		NotTypes:         []string{"gomesh2016.Year", "gomesh2016.Month", "gomesh2016.Day"},
 		ManualLinks:         map[string][]string{"DescriptorReferredTo": []string{"DescriptorRecord"}},
 	}
 ```
@@ -145,7 +145,7 @@ This is from the example directory [https://github.com/gnewton/struct2dot/tree/m
 		ShowStrings:         false,
 		ShowNumbers:         false,
 		RemovePackagePrefix: true,
-		IgnoreTypes: []string{
+		NotTypes: []string{
 			"pubmedstruct.Affiliation",
 			"pubmedstruct.CollectiveName",
 			"pubmedstruct.Day",
@@ -185,7 +185,7 @@ We also ignore a union of the ignores to try and simplify the diagram:
 		ShowStrings:         false,
 		ShowNumbers:         false,
 		RemovePackagePrefix: false,
-		IgnoreTypes: []string{
+		NotTypes: []string{
 			"gomesh2016.Day",
 			"gomesh2016.Month",
 			"gomesh2016.Year",
